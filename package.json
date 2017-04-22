@@ -12,6 +12,8 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "nodemailer": "^4.0.1",
+    "pg": "^6.1.5",
     "sendgrid": "^5.0.0",
     "sendgrid-nodejs": "0.1.0-2"
   }

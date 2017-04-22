@@ -1,3 +1,4 @@
+var api_key = require('./sendgrid.env');
 var helper = require('sendgrid').mail;
 var from_email = new helper.Email('pearljam@pro');
 var to_email = new helper.Email('mikeliao97@berkeley.edu');
@@ -6,8 +7,7 @@ var content = new helper.Content('text/plain', 'Your friend bob invited you to p
 Follow this link to redirect and signup http://pearljam.pro/dfdfasd');
 var mail = new helper.Mail(from_email, subject, to_email, content);
 
-var sg = require('sendgrid')('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');
-process.env.SENDGRID_API_KEY
+var sg = require('sendgrid')(api_key);
 var request = sg.emptyRequest({
   method: 'POST',
   path: '/v3/mail/send',
